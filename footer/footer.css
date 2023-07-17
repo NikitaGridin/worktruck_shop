@@ -1,0 +1,102 @@
+footer {
+  background: #003262;
+}
+
+.application {
+  padding-top: 50px;
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+
+.application_news {
+  padding-top: 10px;
+  width: 40%;
+}
+
+.title_application_news {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.appl_input {
+  width: 400px;
+  padding: 0 15px 0 15px;
+  border-radius: 30px;
+  margin-right: 15px;
+  font-size: 16px;
+  height: 40px;
+  font-weight: 300;
+  background: #003262;
+  border: 1px solid #aed8ff;
+  color: #fff;
+  outline: none;
+}
+
+.appl_input::placeholder {
+  color: #6799b7;
+}
+
+.btn_appl_news {
+  width: 150px;
+  border-radius: 30px;
+  height: 40px;
+  border: none;
+  background: #fff;
+}
+
+.btn_appl_news:hover {
+  color: #fff;
+  background: #003362;
+  border: 1px solid #fff;
+}
+
+.socail_icon {
+  margin-right: 10px;
+}
+
+.logo_footer {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.btn_contact {
+  margin-left: 10px;
+}
+
+.title_company,
+.title_buyer {
+  font-family: dexa round;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.btn_contact,
+.btn_company,
+.btn_buyer {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.btn_company,
+.btn_buyer {
+  margin-bottom: 5px;
+}
+
+.original {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.btn_privacy {
+  margin-left: 40px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../common/style.css" />
+    <link rel="stylesheet" href="./personal_account.css" />
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+    <section class="container d-flex justify-content-between container_profile">
+      <div class="col-md-4 col-lg-3 left_menu">
+        <div class="personal_menu">
+          <a href="personal_account.html" class="btn_personal_menu"
+            ><div class="d-flex mb-2 personal_data_active">
+              <img src="./img/account.svg" alt="" class="icon_menu" />
+              <p class="title_p_left">Личные данные</p>
+            </div></a
+          >
+          <a href="order_history.html" class="btn_personal_menu"
+            ><div class="d-flex mb-2 personal_data">
+              <img src="./img/history.svg" alt="" class="icon_menu" />
+              <p class="title_p_left">История заказов</p>
+            </div></a
+          >
+          <a href="busket.html" class="btn_personal_menu"
+            ><div class="d-flex mb-2 personal_data">
+              <img src="./img/basket.svg" alt="" class="icon_menu" />
+              <p class="title_p_left">Корзина</p>
+            </div></a
+          >
+          <button class="button_catalog">Каталог</button>
+        </div>
+        <div class="manager">
+          <p class="title_manager">Ваш менеджер</p>
+          <h5 class="name_manager">Дубнов Евгений</h5>
+          <button
+            class="button_call_manager"
+            onclick="document.location.replace('tel:#');"
+          >
+            Позвонить
+          </button>
+          <a class="d-flex mt-2" href="tel:#">
+            <img src="./img/phone_line.svg" alt="" class="icon_call" />
+            <h5 class="phone_manager">8 965 555-65-98</h5>
+          </a>
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            data-bs-whatever="@getbootstrap"
+            class="button_change_manager"
+          >
+            Изменить
+          </button>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-5 personal_account">
+        <div class="d-flex justify-content-between">
+          <h1 class="title_category">Личный кабинет</h1>
+          <a href="" class="exit_mobile">
+            <div class="d-flex">
+              <p class="exit_text">Выход</p>
+              <img src="./img/exit.svg" alt="" class="icon_exit" />
+            </div>
+          </a>
+        </div>
+        <div class="personal_menu_mobile">
+          <a href="personal_account.html" class="btn_personal_menu"
+            ><div class="d-flex mb-2 personal_data_active">
+              <img src="./img/account.svg" alt="" class="icon_menu" />
+              <p class="title_p_left">Личные данные</p>
+            </div></a
+          >
+          <a href="order_history.html" class="btn_personal_menu"
+            ><div class="d-flex mb-2 personal_data">
+              <img src="./img/history.svg" alt="" class="icon_menu" />
+              <p class="title_p_left">История заказов</p>
+            </div></a
+          >
+          <a href="busket.html" class="btn_personal_menu"
+            ><div class="d-flex mb-2 personal_data">
+              <img src="./img/basket.svg" alt="" class="icon_menu" />
+              <p class="title_p_left">Корзина</p>
+            </div></a
+          >
+          <button class="button_catalog">Каталог</button>
+        </div>
+        <div class="d-flex justify-content-between block_name">
+          <div class="content_left">
+            <p class="title_name">Фамилия и Имя</p>
+            <h5 class="name_surname">Овчинников Даниил</h5>
+          </div>
+          <a href="#"
+            ><img
+              src="./img/change.svg"
+              alt="Редактировать"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModalChangeName"
+              data-bs-whatever="@getbootstrap"
+              class="change"
+          /></a>
+        </div>
+        <div class="d-flex justify-content-between block_number">
+          <div class="content_left">
+            <p class="title_number">Номер телефона</p>
+            <h5 class="number_phone">8 950 612-16-36</h5>
+          </div>
+          <a href="#"
+            ><img
+              src="./img/change.svg"
+              alt="Редактировать"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModalChangePhone"
+              data-bs-whatever="@getbootstrap"
+              class="change"
+          /></a>
+        </div>
+        <div class="d-flex justify-content-between block_mail">
+          <div class="content_left">
+            <p class="title_mail">Почта</p>
+            <h5 class="mail">deniov4innikov@yandex.ru</h5>
+          </div>
+          <a href="#"
+            ><img
+              src="./img/change.svg"
+              alt="Редактировать"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModalChangeEmail"
+              data-bs-whatever="@getbootstrap"
+              class="change"
+          /></a>
+        </div>
+        <button
+          class="button_change_password"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModalChangePassword"
+          data-bs-whatever="@getbootstrap"
+        >
+          Изменить пароль
+        </button>
+
+        <div class="manager_mobile">
+          <p class="title_manager">Ваш менеджер</p>
+          <h5 class="name_manager">Дубнов Евгений</h5>
+          <button
+            class="button_call_manager"
+            onclick="document.location.replace('tel:#');"
+          >
+            Позвонить
+          </button>
+          <a class="d-flex mt-2" href="tel:#">
+            <img src="./img/phone_line.svg" alt="" class="icon_call" />
+            <h5 class="phone_manager">8 965 555-65-98</h5>
+          </a>
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            data-bs-whatever="@getbootstrap"
+            class="button_change_manager"
+          >
+            Изменить
+          </button>
+        </div>
+      </div>
+      <a href="" class="exit">
+        <div class="d-flex">
+          <p class="exit_text">Выход</p>
+          <img src="./img/exit.svg" alt="" />
+        </div>
+      </a>
+    </section>
+
+    <!-- Модальное окно для кнопки "Изменить менеджера" -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Выберете вашего менеджера
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <!-- <input type="text" class="form-control" id="recipient-name" placeholder="Ваше Имя"> -->
+                <select name="social" class="form-control" id="recipient-name">
+                  <optgroup label="Выберете вашего менеджера">
+                    <option value="r1">Дубнов Евгений</option>
+                    <option value="r2">Бурлака Дмитрий</option>
+                    <option value="r3">Королёв Алексей</option>
+                    <option value="r4">Киреев Дмитрий</option>
+                    <option value="r5">Муравьёв Андрей</option>
+                    <option value="r6">Зозуля Сергей</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="d-flex flex-column">
+                <button type="button" class="button_send">Выбрать</button>
+                <button
+                  type="button"
+                  class="button_close"
+                  data-bs-dismiss="modal"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для кнопки "Изменить пароль" -->
+    <div
+      class="modal fade"
+      id="exampleModalChangePassword"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Изменить пароль</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="recipient-name"
+                  placeholder="Старый пароль"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="recipient-name"
+                  placeholder="Новый пароль"
+                />
+              </div>
+              <div class="d-flex flex-column">
+                <button type="button" class="button_send">Сохранить</button>
+                <button
+                  type="button"
+                  class="button_close"
+                  data-bs-dismiss="modal"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для кнопки "Изменить Фамилию и Имя" -->
+    <div
+      class="modal fade"
+      id="exampleModalChangeName"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Изменить Фамилию и Имя
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="recipient-name"
+                  placeholder="Фамилия"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="recipient-name"
+                  placeholder="Имя"
+                />
+              </div>
+              <div class="d-flex flex-column">
+                <button type="button" class="button_send">Сохранить</button>
+                <button
+                  type="button"
+                  class="button_close"
+                  data-bs-dismiss="modal"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для кнопки "Изменить номер телефона" -->
+    <div
+      class="modal fade"
+      id="exampleModalChangePhone"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Изменить номер телефона
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="recipient-name"
+                  placeholder="Номер телефона"
+                />
+              </div>
+              <div class="d-flex flex-column">
+                <button type="button" class="button_send">Сохранить</button>
+                <button
+                  type="button"
+                  class="button_close"
+                  data-bs-dismiss="modal"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно для кнопки "Изменить номер телефона" -->
+    <div
+      class="modal fade"
+      id="exampleModalChangeEmail"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Изменить почту</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="recipient-name"
+                  placeholder="Новая почта"
+                />
+              </div>
+              <div class="d-flex flex-column">
+                <button type="button" class="button_send">Сохранить</button>
+                <button
+                  type="button"
+                  class="button_close"
+                  data-bs-dismiss="modal"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

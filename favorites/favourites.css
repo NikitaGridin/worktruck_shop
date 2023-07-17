@@ -1,0 +1,162 @@
+.container_favourites {
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+.title_category {
+  font-size: 30px;
+  font-family: dexa round;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.text_no_favourites {
+  width: 43%;
+}
+
+.button_catalog {
+  background: #003362;
+  font-family: Gilroy;
+  border: none;
+  color: #fff;
+  border-radius: 25px;
+  width: 15%;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.button_catalog:hover {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid #003362;
+}
+
+.card-body {
+  cursor: pointer;
+}
+
+.card-title {
+  font-family: gilroy;
+  font-size: 18px;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
+.card_btn {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+.card_btn:hover {
+  color: #1c1c1c;
+}
+
+.articul {
+  color: #8d8d8d;
+  font-size: 14px;
+  margin-top: -5px;
+  margin-bottom: 7px;
+}
+
+.price {
+  font-family: gilroy;
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.nalichie_text {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 5px;
+  font-family: Gilroy;
+}
+
+.btn_korz {
+  background: #f2f3f5;
+  font-family: Gilroy;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  width: 140px;
+  height: 44px;
+  margin-top: 4px;
+}
+
+.btn_korz:hover {
+  background: #003362;
+  color: #fff;
+}
+
+.hover-effect-btn {
+  position: relative;
+  width: 100%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* Настройка цвета и прозрачности для блока с заголовком */
+  transition: background 0.5s ease;
+}
+.hover-effect-btn:hover .overlay {
+  display: block;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
+}
+.title {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 25%; /* Отступ сверху */
+  font-size: 1.9em; /* Размер текста заголовка */
+  text-align: center;
+  text-transform: uppercase; /* Заглавные буквы */
+  color: white; /* Цвет заголовка */
+  z-index: 1;
+  transition: top 0.5s ease;
+}
+.hover-effect-btn:hover .title {
+  top: 10%; /* Отступ сверху при наведении */
+}
+.button {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 45%; /* Отступ сверху */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.qwe {
+  padding: 12px 20px; /* Отступ */
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: gilroy;
+  text-align: center;
+  color: #1c1c1c;
+  background: #f2f3f5; /* Цвет кнопки */
+  z-index: 1;
+}
+
+.qwe:hover {
+  color: #fff;
+  background: #003362;
+}
+
+.hover-effect-btn:hover .button {
+  opacity: 1;
+}

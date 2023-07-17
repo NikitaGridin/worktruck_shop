@@ -1,0 +1,231 @@
+.section_contanier {
+  margin-top: 100px;
+}
+
+ul.breadcrumb {
+  padding: 10px 0px;
+  list-style: none;
+}
+
+/* Отображение элементов списка бок о бок */
+ul.breadcrumb li {
+  display: inline;
+  color: #000;
+  font-size: 14px;
+}
+
+/* Добавить символ косой черты (/) перед/за каждым элементом списка */
+ul.breadcrumb li + li:before {
+  padding: 9px;
+  content: "–\00a0";
+}
+
+/* Добавить цвет для всех ссылок внутри списка */
+ul.breadcrumb li a {
+  color: #8d8d8d;
+  text-decoration: none;
+}
+
+/* Добавить цвет на наведении курсора мыши */
+ul.breadcrumb li a:hover {
+  color: #003362;
+}
+
+.title_category {
+  margin-left: 10px;
+  font-size: 30px;
+  font-family: dexa round;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+}
+
+.button_call {
+  background: #003362;
+  font-family: Gilroy;
+  border: none;
+  color: #fff;
+  border-radius: 25px;
+  width: 49%;
+  height: 40px;
+  margin: 0 auto;
+  border: 1px solid #003362;
+}
+
+.button_call:hover {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid #003362;
+}
+
+.button_passport {
+  background: #ffffff;
+  font-family: Gilroy;
+  border: none;
+  color: #000000;
+  border: 1px solid #003362;
+  border-radius: 25px;
+  width: 49%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.button_passport:hover {
+  background: #003362;
+  color: #ffffff;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+tr,
+th {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #fff;
+  font-weight: 500;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #003362;
+}
+
+.banner_sale {
+  padding: 20px 40px 10px 40px;
+  border-radius: 5px;
+  background: rgb(14, 97, 172);
+  background: linear-gradient(
+    125deg,
+    rgba(14, 97, 172, 1) 0%,
+    rgba(0, 51, 98, 1) 98%
+  );
+}
+
+.title_banner {
+  font-family: dexa round;
+  font-size: 25px;
+  line-height: 1.2em;
+}
+
+.title_span {
+  font-weight: 500;
+}
+
+.left_cont {
+  width: 50%;
+}
+
+.right_cont {
+  padding-top: 12px;
+}
+
+.button_call_cabin,
+.button_call_cabin2 {
+  background: #ffffff;
+  font-family: Gilroy;
+  border: 1px solid #fff;
+  color: #003362;
+  border-radius: 25px;
+  height: 40px;
+  font-size: 18px;
+  width: 40%;
+  margin-top: 15px;
+}
+
+.button_call_cabin2 {
+  background: #003362;
+  color: #fff;
+  width: 20%;
+}
+
+.button_call_cabin2:hover {
+  color: #000;
+  background: #fff;
+  border: 1px solid #003362;
+}
+
+.button_call_cabin:hover {
+  color: #000;
+  border: 1px solid #324874;
+}
+
+.bonus {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+@media screen and (max-width: 1200px) {
+  .title_banner {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .title_banner {
+    font-size: 20px;
+  }
+
+  .bonus {
+    font-size: 15px;
+  }
+
+  .right_cont {
+    padding-top: 0px;
+  }
+
+  .button_call_cabin {
+    margin-top: 10px;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .title_banner {
+    font-size: 20px;
+  }
+
+  .banner_sale {
+    flex-direction: column;
+  }
+
+  .left_cont {
+    width: 100%;
+  }
+
+  .button_call_cabin {
+    margin-top: 10px;
+    width: 40%;
+  }
+
+  .bonus {
+    margin-bottom: 5px;
+  }
+
+  .button_call_cabin2 {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .title_banner {
+    font-size: 18px;
+  }
+
+  .button_call_cabin2 {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .button_call_cabin {
+    width: 100%;
+  }
+
+  .button_call_cabin2 {
+    width: 100%;
+  }
+}

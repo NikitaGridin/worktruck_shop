@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../common/style.css" />
+    <link rel="stylesheet" href="./busket.css">
+    <title>Ваша корзина</title>
+</head>
+<body>
+    <section class="container d-flex justify-content-between container_busket">
+        <div class="col-sm-12 col-md-12 col-lg-8 personal_account">
+            <h1 class="title_category">
+                Корзина
+            </h1>
+            <div class="d-flex justify-content-between block_busket">
+                <img src="./img/krm1.webp" alt="" class="product_img">
+                <div class="d-flex justify-content-between w-100 p-3 product_content">
+                    <div class="left_content">
+                        <div class="title_articul">
+                            <h3 class="title_product">
+                                Выпускной коллектор турбокомпрессора DC12 EGR 
+                            </h3>
+                            <p class="articul">
+                                Арт: 1895269
+                            </p>
+                        </div>
+                        <div class="d-flex price_colich">
+                            <div class="number" data-step="1" data-min="1" data-max="100">
+                                <input class="number-text" type="text" name="count" value="1">
+                                <a href="#" class="number-minus">-</a>
+                                <a href="#" class="number-plus">+</a>
+                            </div>
+                            <div class="">
+                                <p class="title_amount">
+                                    Сумма: <span class="amount">36 000 ₽</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_content">
+                        <a href=""><img src="img/icon/cross.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between block_busket">
+                <img src="./img/krm1.webp" alt="" class="mh-100 product_img">
+                <div class="d-flex justify-content-between w-100 p-3 product_content">
+                    <div class="left_content">
+                        <div class="title_articul">
+                            <h3 class="title_product">
+                                Выпускной коллектор турбокомпрессора DC12 EGR 
+                            </h3>
+                            <p class="articul">
+                                Арт: 1895269
+                            </p>
+                        </div>
+                        <div class="d-flex price_colich">
+                            <div class="number" data-step="1" data-min="1" data-max="100">
+                                <input class="number-text" type="text" name="count" value="1">
+                                <a href="#" class="number-minus">-</a>
+                                <a href="#" class="number-plus">+</a>
+                            </div>
+                            <div class="">
+                                <p class="title_amount">
+                                    Сумма: <span class="amount">36 000 ₽</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_content">
+                        <a href=""><img src="img/icon/cross.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between block_busket">
+                <img src="./img/krm1.webp" alt="" class="mh-100 product_img">
+                <div class="d-flex justify-content-between w-100 p-3 product_content">
+                    <div class="left_content">
+                        <div class="title_articul">
+                            <h3 class="title_product">
+                                Жгут электропроводки верхнего вещевого отделения Жгут электропроводки верхнего вещевого отделения
+                            </h3>
+                            <p class="articul">
+                                Арт: 1895269
+                            </p>
+                        </div>
+                        <div class="d-flex price_colich">
+                            <div class="number" data-step="1" data-min="1" data-max="100">
+                                <input class="number-text" type="text" name="count" value="1">
+                                <a href="#" class="number-minus">-</a>
+                                <a href="#" class="number-plus">+</a>
+                            </div>
+                            <div class="">
+                                <p class="title_amount">
+                                    Сумма: <span class="amount">36 000 ₽</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_content">
+                        <a href=""><img src="img/icon/cross.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <button class="button_catalog" onclick="window.location.href = 'category.html';">Каталог</button>
+        </div>
+        <div class="col-lg-3 block_order">
+            <div class="order_price">
+                <h4 class="your_busket">Ваша корзина</h4>
+                <p> <span>2</span> товара</p>
+                <div class="d-flex justify-content-between general_amount">
+                    <p>Общая стоимость</p>
+                    <p>36 000 ₽</p>
+                </div>
+            </div>
+            <form action="">
+                <div class="input-container">
+                    <img src="img/pers.svg" class="fa fa-user icon"></img>
+                    <input class="input-field" type="tel" placeholder="Ваше Имя" name="usrnm" required>
+                </div>
+                <div class="input-container">
+                    <img src="img/phone.svg" class="fa fa-user icon"></img>
+                    <input class="input-field" type="tel" placeholder="Номер телефона" name="usrnm" required>
+                </div>
+                <button type="button" class="button_order" data-bs-toggle="modal" data-bs-target="#exampleModal">Оформить заказ</button>
+            </form>
+            <p class="pod_form">Дата и стоимость доставки обсуждаются с менеджером</p>
+        </div>
+    </section>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body modal-body-custom">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                  </svg>
+                  <p class="title-modal-ths-order text-center">Спасибо, ваш заказ оформлен</p>
+                  <p class="description-modal-ths-order text-center">В ближайшее время, с вами свяжется менеджер<br> для уточнения деталей</p>
+              <button type="button" class="button-close-modal-ths-order" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="../libray/jquery-3.6.1.min.js"></script>
+<script src="./counter.js"></script>
+</body>
+</html>

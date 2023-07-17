@@ -1,0 +1,313 @@
+.section_contanier {
+  margin-top: 100px;
+}
+
+ul.breadcrumb {
+  padding: 10px 0px;
+  list-style: none;
+}
+
+/* Отображение элементов списка бок о бок */
+ul.breadcrumb li {
+  display: inline;
+  color: #000;
+  font-size: 14px;
+}
+
+/* Добавить символ косой черты (/) перед/за каждым элементом списка */
+ul.breadcrumb li + li:before {
+  padding: 9px;
+  content: "–\00a0";
+}
+
+/* Добавить цвет для всех ссылок внутри списка */
+ul.breadcrumb li a {
+  color: #8d8d8d;
+  text-decoration: none;
+}
+
+/* Добавить цвет на наведении курсора мыши */
+ul.breadcrumb li a:hover {
+  color: #003362;
+}
+
+.title_category {
+  font-size: 30px;
+  font-family: dexa round;
+  font-weight: 500;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.card-body {
+  cursor: pointer;
+}
+
+.card-title {
+  font-family: gilroy;
+  font-size: 18px;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
+.card_btn {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+.card_btn:hover {
+  color: #1c1c1c;
+}
+
+.articul {
+  color: #8d8d8d;
+  font-size: 14px;
+  margin-top: -5px;
+  margin-bottom: 7px;
+}
+
+.price {
+  font-family: gilroy;
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.nalichie_text {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 5px;
+  font-family: Gilroy;
+}
+
+.btn_korz {
+  background: #f2f3f5;
+  font-family: Gilroy;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  width: 140px;
+  height: 44px;
+  margin-top: 4px;
+}
+
+.btn_korz:hover {
+  background: #003362;
+  color: #fff;
+}
+
+.hover-effect-btn {
+  position: relative;
+  width: 100%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* Настройка цвета и прозрачности для блока с заголовком */
+  transition: background 0.5s ease;
+}
+.hover-effect-btn:hover .overlay {
+  display: block;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
+}
+.title {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 25%; /* Отступ сверху */
+  font-size: 1.9em; /* Размер текста заголовка */
+  text-align: center;
+  text-transform: uppercase; /* Заглавные буквы */
+  color: white; /* Цвет заголовка */
+  z-index: 1;
+  transition: top 0.5s ease;
+}
+.hover-effect-btn:hover .title {
+  top: 10%; /* Отступ сверху при наведении */
+}
+.button {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 45%; /* Отступ сверху */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.qwe {
+  padding: 12px 20px; /* Отступ */
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: gilroy;
+  text-align: center;
+  color: #1c1c1c;
+  background: #f2f3f5; /* Цвет кнопки */
+  z-index: 1;
+}
+
+.qwe:hover {
+  color: #fff;
+  background: #003362;
+}
+
+.hover-effect-btn:hover .button {
+  opacity: 1;
+}
+@media screen and (max-width: 1650px) {
+}
+
+@media screen and (max-width: 1400px) {
+  .title_category {
+    font-size: 27px;
+  }
+
+  .price {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .title_category {
+    font-size: 25px;
+  }
+
+  .slider {
+    width: 70%;
+  }
+
+  .price {
+    font-size: 25px;
+  }
+
+  .number {
+    width: 110px;
+    margin-top: 7px;
+  }
+
+  .number-text {
+    width: 47px;
+  }
+
+  .nalichie_text {
+    font-size: 14px;
+  }
+
+  .warning {
+    font-size: 16px;
+  }
+
+  .city_avilability {
+    flex-direction: column;
+  }
+
+  .city {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .slider_price {
+    flex-direction: column;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .price_score {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .description_spare {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .description_availability {
+    flex-direction: column;
+  }
+
+  .description_spare {
+    width: 150%;
+  }
+
+  .city_avilability {
+    flex-direction: row;
+  }
+
+  .parametrs_product {
+    flex-direction: column;
+  }
+
+  .button_request {
+    width: 50%;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 400px) {
+  .title_category {
+    font-size: 22px;
+  }
+
+  .title_description {
+    width: 120%;
+  }
+
+  .parametrs {
+    flex-direction: column;
+  }
+
+  .parametr {
+    margin-bottom: 15px;
+  }
+
+  .button_request {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .number {
+    width: 120px;
+    margin-top: 7px;
+  }
+
+  .number-text {
+    width: 57px;
+  }
+
+  .warning {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+}

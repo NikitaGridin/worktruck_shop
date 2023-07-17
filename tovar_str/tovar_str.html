@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"/> <!-- Подключаем стили плагина Swiper -->
+    <link rel="stylesheet" href="./slider_product.css"/>
+    <link rel="stylesheet" href="../common/style.css" />
+    <link rel="stylesheet" href="./tovar_str.css">
+    <title>Страница товара</title>
+</head>
+<body>
+    <section class="container section_contanier">
+        <ul class="breadcrumb">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Двигатель</a></li>
+            <li><a href="category.html">Головка блока цилиндров</a></li>
+            <li><a href="tovar_cart.html">Коромысло</a></li>
+            <li>Коромысло выпускного клапана HPI</li>
+        </ul>
+        <div class="d-flex title_name_product">
+            <a href="/tovar_cart.html"><img src="./img/back_btn.svg" alt="" class="icon_back"></a>
+            <h1 class="title_category">
+                Коромысло выпускного клапана HPI
+            </h1>
+        </div>
+        <div class="d-flex justify-content-between mt-5 slider_price">
+            <section class="slider"> <!-- Начало слайдера -->
+                  <div class="slider__flex">
+                    <div class="slider__col">
+                        <!-- Кнопка для переключения на предыдущий слайд -->
+                      <div class="slider__prev"><ion-icon name="chevron-up-outline"></ion-icon></div> 
+                      <div class="slider__thumbs">
+                        <div class="swiper-container"> <!-- Слайдер с превью -->
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="slider__image"><img src="./img/krm1.webp" alt=""/></div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="slider__image"><img src="./img/krm2.webp" alt=""/></div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="slider__image"><img src="./img/krm3.webp" alt=""/></div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="slider__image"><img src="./img/krm4.webp" alt=""/></div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="slider__image"><img src="./img/krm5.webp" alt=""/></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        <!-- Кнопка для переключения на следующий слайд -->
+                      <div class="slider__next"><ion-icon name="chevron-down-outline"></ion-icon></div>
+                    </div>
+          
+                    <div class="slider__images">
+                      <div class="swiper-container"> <!-- Слайдер с изображениями -->
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="slider__image"><img src="./img/krm1.webp" alt=""/></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="slider__image"><img src="./img/krm2.webp" alt=""/></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="slider__image"><img src="./img/krm3.webp" alt=""/></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="slider__image"><img src="./img/krm4.webp" alt=""/></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="slider__image"><img src="./img/krm5.webp" alt=""/></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-between mt-5 parametrs_product">
+                    <div class="d-flex parametrs">
+                        <div class="parametr">
+                            <p class="title_parametr">Количество</p>
+                            <p class="number_parametr">10</p>
+                        </div>
+                        <div class="parametr">
+                            <p class="title_parametr">Производитель</p>
+                            <p class="number_parametr">Scania</p>
+                        </div>
+                        <div class="parametr">
+                            <p class="title_parametr">Артикул</p>
+                            <p class="number_parametr">1895269</p>
+                        </div>
+                    </div>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" class="button_request">Запросить фото</button>
+                  </div>
+            </section> <!-- Конец слайдера -->
+            <!-- Карточка с ценой и кнопками покупки -->
+            <div class="col-3 price_score">
+                <div class="d-flex justify-content-between price_buy">
+                    <div class="price_nal">
+                        <h4 class="price">18 000 ₽</h4>
+                        <div class="d-flex nalichie">
+                            <img src="./img/nalichie.svg" alt="">
+                            <p class="nalichie_text">В наличии</p>
+                        </div>
+                    </div>
+                    <div class="number" data-step="1" data-min="1" data-max="100">
+                        <input class="number-text" type="text" name="count" value="1">
+                        <a href="#" class="number-minus">-</a>
+                        <a href="#" class="number-plus">+</a>
+                    </div>
+                </div>
+                <div class="btn_buy">
+                    <button class="button_basket">В корзину</button><br>
+                    <button class="button_buy_oneclick">Купить в 1 клик</button> <!-- Переход на корзину с добавлением товара в нее -->
+                    <p class="warning">Все цены на сайте указаны<br> без учета НДС</p>
+                </div>
+                <div class="callback">
+                    <p class="post">Ваш менеджер</p>
+                    <P class="name_manager">Дубнов Евгений</P>
+                    <button class="button_callback"><img src="./img/call.svg" alt="" class="icon_call"></ion-icon>8 962 455-52-52</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-5 description_availability">
+            <div class="col-8 description">
+                <h3 class="title_description">Описание запчасти</h3>
+                <p class="description_spare"> Коромысло выпускного клапана HPI Скания б/у оригинал<br>
+                    Номер детали: 1438757<br>
+                    В комплект товара входит:<br>
+                    Данную запасную часть вы можете найти в категории нашего каталога:Коромысло<br>
+                    Внутренний код детали в нашем каталоге wt24.ru: 147<br>
+                    Номера замен по оригинальному каталогу: 2189635<br>
+                    Разборка грузовых иномарок WorkTruck имеет свои собственные запчасти Scania в ассортименте<br>
+                    Купить запчасти оптом или в розницу можно как за наличный расчёт так и по безналу с НДС.<br>
+                    Разборка грузовиков организует доставку по Нижнему Новгороду.<br>
+                    Отправляем по России через Транспортные компании.<br>
+                    Грузовая авторазборка «WorkTruck» предоставляет гарантию на товар.<br>
+                    Серии: Серия P, Серия G, Серия R
+                    
+                </p>
+            </div>
+            <!-- Наличие по городам -->
+            <div class="col-md-4 col-lg-3 p-4 h-50 block_avilability">
+                <h5 class="fs-4 title_avilability">Наличие</h5>
+                <div class="d-flex justify-content-between mt-2 city_avilability">
+                  <p class="city">Нижний Новгород</з>
+                  <div class="d-flex avilability">
+                    <img src="./img/mark_yes.svg" alt="" class="mb-3 me-2">
+                    <p>В наличии</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between city_avilability">
+                  <p class="city">Москва</з>
+                  <div class="d-flex avilability">
+                      <img src="./img/mark_yes.svg" alt="" class="mb-3 me-2">
+                      <p>В наличии</p>
+                  </div>
+                </div>
+              <div class="d-flex justify-content-between city_avilability">
+                <p class="city">Екатеринбург</з>
+                <div class="d-flex avilability">
+                    <img src="./img/mark_yes.svg" alt="" class="mb-3 me-2">
+                    <p>В наличии</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between city_avilability">
+              <p class="city">Новосибирск</з>
+              <div class="d-flex avilability">
+                  <img src="./img/mark_no.svg" alt="" class="mb-3 me-2">
+                  <p>Под заказ</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between city_avilability">
+              <p class="city">Ростов-на-Дону</з>
+              <div class="d-flex avilability">
+                <img src="./img/mark_no.svg" alt="" class="mb-3 me-2">
+                <p>Под заказ</p>
+            </div>
+            </div>
+            <div class="d-flex justify-content-between city_avilability">
+              <p class="city">Хабаровск</з>
+              <div class="d-flex avilability">
+                <img src="./img/mark_no.svg" alt="" class="mb-3 me-2">
+                <p>Под заказ</p>
+            </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Подключить малти -->
+        <div class="mt-5">
+          <img src="./img/malti.png" alt="">
+        </div>
+        <!-- Плюсы нашей компании -->
+        <!-- <div class="d-flex justify-content-between pluses">
+          <div class="d-flex plus">
+              <img src="img/icon/sklad.svg" alt="">
+              <p class="text_plus">Большой выбор<br> запчастей</p>
+          </div>
+          <div class="d-flex plus">
+              <img src="img/icon/turbina.svg" alt="">
+              <p class="text_plus">Оригинальные<br> запчасти</p>
+          </div>
+          <div class="d-flex plus">
+              <img src="img/icon/otzivi.svg" alt="">
+              <p class="text_plus">Более 5 лет<br> на рынке</p>
+          </div>
+          <div class="d-flex plus">
+              <img src="img/icon/dostavka.svg" alt="">
+              <p class="text_plus">Быстрая<br> доставка</p>
+          </div>
+      </div> -->
+<!-- Модальное окно для кнопки "Запрос фото" -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Запрос дополнительных фото</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <!-- <input type="text" class="form-control" id="recipient-name" placeholder="Ваше Имя"> -->
+                  <select name="social" class="form-control" id="recipient-name">
+                    <optgroup label="Выберете месенджер для отправки фото">
+                     <option value="r1">Telegram</option>
+                     <option value="r2">WhatsApp</option>
+                     <option value="r3">Viber</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <input type="tel" class="form-control" id="recipient-name" placeholder="Номер телефона">
+                </div>
+                <div class="d-flex flex-column">
+                  <button type="button" class="button_send">Отправить</button>
+                  <button type="button" class="button_close" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+<script src="../libray/jquery-3.6.1.min.js"></script>
+<script src="./counter.js"></script>
+<script src="./modal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script> <!-- Подключаем js-файл плагина Swiper -->
+<script src="./slider_product.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script  nomodulesrc="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</body>
+</html>

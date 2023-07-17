@@ -1,0 +1,179 @@
+.container_history {
+  margin-top: 120px;
+}
+
+.title_category {
+  font-size: 30px;
+  font-family: dexa round;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.personal_menu_mobile {
+  display: none;
+}
+
+.personal_data_active {
+  background: #fff;
+  font-family: Gilroy;
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
+  border: 1px solid #003362;
+  border-radius: 25px;
+}
+
+.personal_data {
+  font-family: Gilroy;
+  padding-left: 20px;
+  border: 1px solid #f2f3f5;
+  border-radius: 25px;
+}
+
+.personal_data:hover {
+  background: #fff;
+  border: 1px solid #003362;
+}
+
+.title_p_left {
+  margin: 7px 0 7px 10px;
+}
+
+.block_order {
+  background: #fff;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  padding: 10px 20px 15px 20px;
+}
+/* Номер заказа */
+.title_order {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.order {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.more {
+  font-size: 18px;
+  font-weight: 500;
+  color: #003362;
+}
+/* Стоимость заказа */
+.title_price {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.price {
+  font-weight: 400;
+}
+
+.status {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.button_catalog {
+  background: #003362;
+  font-family: Gilroy;
+  border: none;
+  color: #fff;
+  border-radius: 25px;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.button_catalog:hover {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid #003362;
+}
+@media screen and (max-width: 1650px) {
+}
+
+@media screen and (max-width: 1200px) {
+  .title_category {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .icon_menu {
+    width: 17px;
+  }
+
+  .title_p_left {
+    font-size: 14px;
+  }
+
+  .title_category {
+    font-size: 22px;
+  }
+
+  .personal_menu {
+    display: none;
+  }
+
+  .personal_menu_mobile {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .personal_account {
+    width: 100%;
+  }
+
+  .order {
+    font-size: 17px;
+  }
+
+  .more {
+    font-size: 17px;
+  }
+
+  .title_price {
+    font-size: 17px;
+  }
+
+  .status {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .title_p_left {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 550px) {
+  .order_price {
+    flex-direction: column;
+  }
+
+  .title_price {
+    margin-left: 0;
+  }
+
+  .block_order {
+    position: relative;
+  }
+
+  .status {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+}
