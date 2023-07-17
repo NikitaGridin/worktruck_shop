@@ -158,9 +158,8 @@ text-align: justify;
   .guarantees__grid__wrapper {
     grid-template-columns: 1fr;
   }
-  .guarantees__block__flex img{
-    width: 50%;
-  }
+  .guarantees__grid__wrapper__main__screen__text img {
+    width: 50%;}
 }
 @media (max-width: 600px) {
  .guarantees__grid__wrapper__main__screen__text{
