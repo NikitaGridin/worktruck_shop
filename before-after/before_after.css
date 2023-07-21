@@ -91,6 +91,7 @@ ul.breadcrumb li a:hover {
     border-radius: 20px;
     cursor: pointer;
 }
+
 @media (max-width: 800px) {
     .before_after__images_wrapper {
         flex-direction: column;
@@ -102,10 +103,9 @@ ul.breadcrumb li a:hover {
         width: 100%;
     }
     .before_after__arrow {
-        margin-top: 10px;
-        margin-bottom: 60px;
         transform: rotate(90deg);
         width: 24px;
+        margin: 10px 0px 40px 0px;
     }
     .before_after__modal_img {
         width: 90%;
