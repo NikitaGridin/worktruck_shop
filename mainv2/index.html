@@ -10,12 +10,840 @@
         outline: none;
       }
     </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../header/header.css" />
+    <link rel="stylesheet" href="../header/common/style.css" />
+    <link rel="stylesheet" href="../header/header_mobile.css" />
   </head>
   <body>
-    <header class="w-full h-[60px] flex items-center justify-center mb-5">
-      Header
+    <header class="header">
+      <div class="container">
+        <div class="header-wrap">
+          <a href="index.html" class="header-logo"
+            ><img src="../header/img/blue_logo.svg" alt="Logo"
+          /></a>
+          <a href="index.html" class="header-logo-mobile"
+            ><img src="../header/img/blue_logo_mobile.svg" alt="Logo"
+          /></a>
+          <button
+            type="button"
+            class="header-btn-catalog"
+            id="catalog-menu-trigger"
+          >
+            <img src="../header/img/catalog-icon.svg" alt="Icon" />
+            <span>Каталог</span>
+          </button>
+          <div class="header-right">
+            <button
+              type="button"
+              class="header-search__btn-mobile"
+              id="header-search-trigger-mobile"
+            >
+              <img src="../header/img/search-icon-black.svg" alt="Search" />
+            </button>
+            <div class="header-search" id="header-search">
+              <input
+                placeholder="Введите артикул запчасти"
+                class="header-search__input"
+                type="text"
+                id="header-search-input"
+              />
+              <button
+                type="button"
+                class="header-search__btn"
+                id="header-search-trigger"
+              >
+                <img src="../header/img/search-icon.svg" alt="Search" />
+              </button>
+              <div id="header-search-modal" class="header-search-modal">
+                <div
+                  class="header-search-modal__loader"
+                  id="header-search-modal__loader"
+                >
+                  <div class="lds-facebook">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+                <ul
+                  class="header-search-modal__results"
+                  id="header-search-modal__results"
+                ></ul>
+              </div>
+            </div>
+            <a href="tel:89005412455" class="header-phone header-link">
+              <img src="../header/img/phone-icon.svg" alt="Phone" />
+              <span>8 900 541-24-55</span>
+            </a>
+            <a href="authorization.html" class="header-login header-link">
+              <img src="../header/img/login-icon.svg" alt="Login" />
+              <span>Войти</span>
+            </a>
+            <a href="favourites.html" class="header-heart header-link">
+              <img src="../header/img/heart.svg" alt="Heart" />
+              <span>Избранное</span>
+            </a>
+            <button
+              id="cd-cart-trigger"
+              type="button"
+              class="header-btn-cart header-link"
+            >
+              <img src="../header/img/cart-icon.svg" alt="Cart" />
+              <span>Корзина</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
-    <main class="w-[90%] mx-auto">
+    <!-- Шапка -->
+    <div id="cd-shadow-layer"></div>
+    <!-- Корзина -->
+    <div id="cd-cart">
+      <h2>Корзина</h2>
+      <ul class="cd-cart-items">
+        <li>
+          <div class="cd-cart-item__image">
+            <img src="../header/img/krm1.webp" alt="Product" />
+          </div>
+          <div>
+            <span class="cd-qty">2x</span>
+            Коромысло выпускного клапана HPI
+            <div class="cd-price">36 000 ₽</div>
+          </div>
+          <a href="#0" class="cd-item-remove cd-img-replace">Удалить</a>
+        </li>
+        <li>
+          <div class="cd-cart-item__image">
+            <img src="../header/img/krm2.webp" alt="Product" />
+          </div>
+          <div>
+            <span class="cd-qty">1x</span> Коромысло выпускного клапана HPI
+            <div class="cd-price">18 000 ₽</div>
+          </div>
+          <a href="#0" class="cd-item-remove cd-img-replace">Удалить</a>
+        </li>
+      </ul>
+
+      <div class="cd-cart-total">
+        <p>Общая стоимость <span>54 000 ₽</span></p>
+      </div>
+
+      <a href="busket.html" class="checkout-btn">Оформить заказ</a>
+    </div>
+    <!-- Боковое меню -->
+    <nav id="catalog-menu">
+      <button id="catalog-menu-close">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          fill="#191919"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M16.704 15.658l4.393-4.393a.734.734 0 0 0 0-1.046.734.734 0 0 0-1.046 0l-4.393 4.393-4.393-4.393a.734.734 0 0 0-1.046 0 .734.734 0 0 0 0 1.046l4.393 4.393-4.393 4.393a.734.734 0 0 0 0 1.046c.142.141.33.217.519.217a.736.736 0 0 0 .518-.217l4.393-4.393 4.392 4.393c.142.141.33.217.519.217a.736.736 0 0 0 .518-.217.734.734 0 0 0 0-1.046l-4.374-4.393z"
+          />
+        </svg>
+      </button>
+      <div id="catalog-menu-body">
+        <div
+          class="catalog-menu__panel catalog-menu__panel--main catalog-menu__panel--active"
+        >
+          <ul class="catalog-menu__list">
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="category.html">Все категории</a>
+            </li>
+            <li
+              class="catalog-menu__item catalog-menu__item--bold"
+              data-hasPanel="true"
+            >
+              <a href="#">Двигатель</a>
+              <div class="catalog-menu__panel">
+                <div
+                  class="catalog-menu__subheader"
+                  style="background-color: #003362; color: #ffffff"
+                >
+                  <button class="catalog-menu-back">
+                    <svg
+                      width="32"
+                      height="32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24 16H8"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M8.707 16.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 1 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                        fill="#fff"
+                      ></path>
+                      <path
+                        d="M13.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 0 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                        fill="#fff"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div class="catalog-menu__subheader-wrap">
+                    <p
+                      class="catalog-menu__subheader-title"
+                      data-cerberus="mainmenu-title"
+                    >
+                      Двигатель
+                    </p>
+                    <a href="#" class="catalog-menu__subheader-link">
+                      <span> Смотреть все товары</span>
+                      <svg
+                        width="32"
+                        height="32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 16h16"
+                          stroke="#AED8FF"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        ></path>
+                        <path
+                          d="M23.293 16.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 1 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                          fill="#AED8FF"
+                        ></path>
+                        <path
+                          d="M18.707 22.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 0 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                          fill="#AED8FF"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <ul class="catalog-menu__list">
+                  <li class="catalog-menu__item">
+                    <a href="#">Двигатель в сборе</a>
+                  </li>
+                  <li class="catalog-menu__item" data-hasPanel="true">
+                    <a href="#">Блок цилиндров и комплектующие</a>
+                    <div class="catalog-menu__panel">
+                      <div
+                        class="catalog-menu__subheader"
+                        style="background-color: #003362; color: #ffffff"
+                      >
+                        <button class="catalog-menu-back">
+                          <svg
+                            width="32"
+                            height="32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M24 16H8"
+                              stroke="#fff"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            ></path>
+                            <path
+                              d="M8.707 16.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 1 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                              fill="#fff"
+                            ></path>
+                            <path
+                              d="M13.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 0 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                              fill="#fff"
+                            ></path>
+                          </svg>
+                        </button>
+                        <div class="catalog-menu__subheader-wrap">
+                          <p
+                            class="catalog-menu__subheader-title"
+                            data-cerberus="mainmenu-title"
+                          >
+                            Блок цилиндров и комплектующие
+                          </p>
+                          <a href="#" class="catalog-menu__subheader-link">
+                            <span> Смотреть все товары</span>
+                            <svg
+                              width="32"
+                              height="32"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8 16h16"
+                                stroke="#AED8FF"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                              <path
+                                d="M23.293 16.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 1 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                                fill="#AED8FF"
+                              ></path>
+                              <path
+                                d="M18.707 22.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 0 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                                fill="#AED8FF"
+                              ></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <ul class="catalog-menu__list">
+                        <li class="catalog-menu__item">
+                          <a href="#">Блок цилиндров</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Гильза</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Задняя плита ГРМ</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Кожух маховика</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Кожух привода ГРМ</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Кронштейн системы вентиляции картера</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Крышка блока цилиндров</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#"
+                            >Маслоотделитель системы вентиляции картера
+                            двигателя
+                          </a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Монтажные детали блока</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Поддон двигателя</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Прочее по блоку цилиндров</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Система вентиляции картерных газов</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#"
+                            >Соединение вентиляции картера двигателя</a
+                          >
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#"
+                            >Трубопровод вентиляции картера двигателя</a
+                          >
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Фланец двигателя системы охлаждения</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Форсунка охлаждения поршня</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Шланг вентиляции картера двигателя</a>
+                        </li>
+                        <!-- <li class="catalog-menu__item" data-hasPanel="true">
+                                        <a href="#">Акции - подменю</a>
+                                        <div class="catalog-menu__panel">
+                                            <div class="catalog-menu__subheader" style="background-color: #003362; color: #ffffff">
+                                                <button class="catalog-menu-back">
+                                                    <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 16H8" stroke="#fff" stroke-width="2" stroke-linecap="round"></path><path d="M8.707 16.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 1 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z" fill="#fff"></path><path d="M13.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 0 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z" fill="#fff"></path></svg>
+                                                </button>
+                                                <div class="catalog-menu__subheader-wrap">
+                                                    <p class="catalog-menu__subheader-title" data-cerberus="mainmenu-title">Акции</p>
+                                                    <a href="#" class="catalog-menu__subheader-link">
+                                                        <span> Смотреть все акции</span>
+                                                        <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16h16" stroke="#AED8FF" stroke-width="2" stroke-linecap="round"></path><path d="M23.293 16.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 1 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z" fill="#AED8FF"></path><path d="M18.707 22.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 0 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z" fill="#AED8FF"></path></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul class="catalog-menu__list">
+                                                <li class="catalog-menu__item">
+                                                    <a href="#">Купить акции - ссылка</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li> -->
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="catalog-menu__item" data-hasPanel="true">
+                    <a href="#">Головка блока цилиндров</a>
+                    <div class="catalog-menu__panel">
+                      <div
+                        class="catalog-menu__subheader"
+                        style="background-color: #003362; color: #ffffff"
+                      >
+                        <button class="catalog-menu-back">
+                          <svg
+                            width="32"
+                            height="32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M24 16H8"
+                              stroke="#fff"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            ></path>
+                            <path
+                              d="M8.707 16.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 1 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                              fill="#fff"
+                            ></path>
+                            <path
+                              d="M13.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 0 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                              fill="#fff"
+                            ></path>
+                          </svg>
+                        </button>
+                        <div class="catalog-menu__subheader-wrap">
+                          <p
+                            class="catalog-menu__subheader-title"
+                            data-cerberus="mainmenu-title"
+                          >
+                            Головка блока цилиндров
+                          </p>
+                          <a href="#" class="catalog-menu__subheader-link">
+                            <span> Смотреть все товары</span>
+                            <svg
+                              width="32"
+                              height="32"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8 16h16"
+                                stroke="#AED8FF"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                              <path
+                                d="M23.293 16.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 1 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                                fill="#AED8FF"
+                              ></path>
+                              <path
+                                d="M18.707 22.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 0 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                                fill="#AED8FF"
+                              ></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <ul class="catalog-menu__list">
+                        <li class="catalog-menu__item">
+                          <a href="#">ГБЦ (головка блока цилиндров)</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Клапана и пружины с сухарями</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Коромысла в сборе с опорой</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Коромысло</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Крышка ГБЦ</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Опора и вал коромысел</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Проставка ГБЦ</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Разные детали по ГБЦ</a>
+                        </li>
+                        <li class="catalog-menu__item">
+                          <a href="#">Траверса клапанов, солдатик</a>
+                        </li>
+                        <!-- <li class="catalog-menu__item" data-hasPanel="true">
+                                        <a href="#">Ещё одно подменю</a>
+                                        <div class="catalog-menu__panel">
+                                            <div class="catalog-menu__subheader" style="background-color: #003362; color: #ffffff">
+                                                <button class="catalog-menu-back">
+                                                    <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 16H8" stroke="#fff" stroke-width="2" stroke-linecap="round"></path><path d="M8.707 16.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 1 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z" fill="#fff"></path><path d="M13.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 0 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z" fill="#fff"></path></svg>
+                                                </button>
+                                                <div class="catalog-menu__subheader-wrap">
+                                                    <p class="catalog-menu__subheader-title" data-cerberus="mainmenu-title">Призы</p>
+                                                    <a href="#" class="catalog-menu__subheader-link">
+                                                        <span> Смотреть все акции</span>
+                                                        <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16h16" stroke="#AED8FF" stroke-width="2" stroke-linecap="round"></path><path d="M23.293 16.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 1 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z" fill="#AED8FF"></path><path d="M18.707 22.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 0 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z" fill="#AED8FF"></path></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul class="catalog-menu__list">
+                                                <li class="catalog-menu__item">
+                                                    <a href="#">Просто ссылка</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li> -->
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li
+              class="catalog-menu__item catalog-menu__item--bold"
+              data-hasPanel="true"
+            >
+              <a href="#">Грузовой кузов</a>
+              <div class="catalog-menu__panel">
+                <div
+                  class="catalog-menu__subheader"
+                  style="background-color: #003362; color: #ffffff"
+                >
+                  <button class="catalog-menu-back">
+                    <svg
+                      width="32"
+                      height="32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24 16H8"
+                        stroke="#fff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M8.707 16.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 1 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                        fill="#fff"
+                      ></path>
+                      <path
+                        d="M13.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 0 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                        fill="#fff"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div class="catalog-menu__subheader-wrap">
+                    <p
+                      class="catalog-menu__subheader-title"
+                      data-cerberus="mainmenu-title"
+                    >
+                      Новогодний декор
+                    </p>
+                    <a href="#" class="catalog-menu__subheader-link">
+                      <span> Смотреть все товары</span>
+                      <svg
+                        width="32"
+                        height="32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 16h16"
+                          stroke="#AED8FF"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        ></path>
+                        <path
+                          d="M23.293 16.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 1 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                          fill="#AED8FF"
+                        ></path>
+                        <path
+                          d="M18.707 22.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 0 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                          fill="#AED8FF"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <ul class="catalog-menu__list">
+                  <li class="catalog-menu__item">
+                    <a href="#">Новогодний декор</a>
+                    <a href="#">Новогодний декор</a>
+                    <a href="#">Новогодний декор</a>
+                    <a href="#">Новогодний декор</a>
+                  </li>
+                  <li class="catalog-menu__item" data-hasPanel="true">
+                    <a href="#">Ёлки - подменю</a>
+                    <div class="catalog-menu__panel">
+                      <div
+                        class="catalog-menu__subheader"
+                        style="background-color: #003362; color: #fcfcfc"
+                      >
+                        <button class="catalog-menu-back">
+                          <svg
+                            width="32"
+                            height="32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M24 16H8"
+                              stroke="#fff"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            ></path>
+                            <path
+                              d="M8.707 16.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 1 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                              fill="#fff"
+                            ></path>
+                            <path
+                              d="M13.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 0 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                              fill="#fff"
+                            ></path>
+                          </svg>
+                        </button>
+                        <div class="catalog-menu__subheader-wrap">
+                          <p
+                            class="catalog-menu__subheader-title"
+                            data-cerberus="mainmenu-title"
+                          >
+                            Ёлки
+                          </p>
+                          <a href="#" class="catalog-menu__subheader-link">
+                            <span>Смотреть все ёлки</span>
+                            <svg
+                              width="32"
+                              height="32"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8 16h16"
+                                stroke="#AED8FF"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                              <path
+                                d="M23.293 16.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 1 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                                fill="#AED8FF"
+                              ></path>
+                              <path
+                                d="M18.707 22.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 0 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                                fill="#AED8FF"
+                              ></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <ul class="catalog-menu__list">
+                        <li class="catalog-menu__item">
+                          <a href="#">Купить ёлки - ссылка</a>
+                        </li>
+                        <li class="catalog-menu__item" data-hasPanel="true">
+                          <a href="#">Ёлки хвойные - подменю</a>
+                          <div class="catalog-menu__panel">
+                            <div
+                              class="catalog-menu__subheader"
+                              style="background-color: #003362; color: #ffffff"
+                            >
+                              <button class="catalog-menu-back">
+                                <svg
+                                  width="32"
+                                  height="32"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M24 16H8"
+                                    stroke="#fff"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                  ></path>
+                                  <path
+                                    d="M8.707 16.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 1 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                                    fill="#fff"
+                                  ></path>
+                                  <path
+                                    d="M13.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 0 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                                    fill="#fff"
+                                  ></path>
+                                </svg>
+                              </button>
+                              <div class="catalog-menu__subheader-wrap">
+                                <p
+                                  class="catalog-menu__subheader-title"
+                                  data-cerberus="mainmenu-title"
+                                >
+                                  Ёлки хвойные - подменю
+                                </p>
+                                <a
+                                  href="#"
+                                  class="catalog-menu__subheader-link"
+                                >
+                                  <span> Смотреть все хвойные ёлки</span>
+                                  <svg
+                                    width="32"
+                                    height="32"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M8 16h16"
+                                      stroke="#AED8FF"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                    ></path>
+                                    <path
+                                      d="M23.293 16.707a1 1 0 0 0 1.414-1.414l-1.414 1.414Zm-4.586-7.414a1 1 0 1 0-1.414 1.414l1.414-1.414Zm6 6-6-6-1.414 1.414 6 6 1.414-1.414Z"
+                                      fill="#AED8FF"
+                                    ></path>
+                                    <path
+                                      d="M18.707 22.707a1 1 0 0 1-1.414-1.414l1.414 1.414Zm4.586-7.414a1 1 0 0 1 1.414 1.414l-1.414-1.414Zm-6 6 6-6 1.414 1.414-6 6-1.414-1.414Z"
+                                      fill="#AED8FF"
+                                    ></path>
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                            <ul class="catalog-menu__list">
+                              <li class="catalog-menu__item">
+                                <a href="#">Купить хвойные ёлки - ссылка</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Дополнительное оборудование</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Кабина и комплектующие</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Карданный вал</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Контрольные приборы</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Крепеж</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Органы управления двигателем</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Разное</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Рама и бампер</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Рулевое управление</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Система охлаждения</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Ступицы и колеса</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Сцепление</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Топливная и выпускная системы</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Тормозная система</a>
+            </li>
+            <li class="catalog-menu__item catalog-menu__item--bold">
+              <a href="#">Электрическая система</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="blog.html">Блог</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="recovery.html">Восстановление Scania</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="special_offer_engine.html">Двигатель DC 1217</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="special_offer_cabin.html">Кабина CR19</a>
+            </li>
+          </ul>
+          <div class="catalog-menu-line"></div>
+          <ul class="catalog-menu__list" style="margin-top: 0">
+            <li class="catalog-menu__item">
+              <a href="about_company.html">О компании</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="personal_account.html">Профиль</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="order_history.html">История заказов</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="contacts.html">Контакты</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#">Помощь</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#">Оплата</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#">Гарантии</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Мобильное меню снизу -->
+    <div class="navbar">
+      <div class="mmenu">
+        <a href="https://wa.me/79524759242" class="header_link">
+          <img src="../header/img/whatsapp.svg" alt="whatsapp" />
+          <span>Whatsapp</span>
+        </a>
+        <a href="tel:79524759242" class="header_link qwe">
+          <img src="../header/img/call.svg" alt="whatsapp" />
+          <span>Звонок</span>
+        </a>
+        <button
+          type="button"
+          class="header_btn_catalog"
+          id="catalog-menu-trigger2"
+        >
+          <img src="../header/img//menu.svg" alt="Icon" />
+        </button>
+        <a href="viber://add?number=79524759242" class="header_link">
+          <img src="../header/img/viber.svg" alt="whatsapp" />
+          <span style="font-size: 13px">Viber</span>
+        </a>
+        <a href="https://t.me/79524759242" class="header_link">
+          <img src="../header/img/telegram.svg" alt="whatsapp" />
+          <span>Telegram</span>
+        </a>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script_header.js"></script>
+    <main class="w-[90%] mx-auto mt-[80px] mb-[120px]">
       <div class="grid grid-cols-1 mb-[38px] md:grid-cols-2 gap-[12px]">
         <a
           href="#"
@@ -60,7 +888,7 @@
             class="flex justify-center font-bold py-[13px] mt-[20px] text-white items-center"
             id="catalog-button"
           >
-            <div class="mr-3 text-[20px]">Каталог</div>
+            <div class="mr-3 text-[20px]">Категории</div>
             <img
               src="./Vector.svg"
               alt=""
@@ -100,22 +928,22 @@
           <h1 class="mb-[12px]">Вы смотрели</h1>
           <div class="grid grid-cols-1 gap-[30px]">
             <img
-              src="https://sun9-69.userapi.com/impg/dJ5pQe_YRmN2D6ksQC2SPGRvezTzOxzXi73QbQ/eyjF1sGjtbA.jpg?size=308x405&quality=96&sign=4415ab61e3a11c4ea0b28d04bb6634ff&type=album"
+              src="https://sun9-7.userapi.com/impg/PuYN5Nq3VS-gaej3fTHRtnAX9bwGVKT_u9lPVA/_nDewO3Fei4.jpg?size=258x312&quality=96&sign=003eae85b2fc93969bf3a848338b2464&type=album"
               alt=""
               class="w-full rounded-lg"
             />
             <img
-              src="https://sun9-69.userapi.com/impg/dJ5pQe_YRmN2D6ksQC2SPGRvezTzOxzXi73QbQ/eyjF1sGjtbA.jpg?size=308x405&quality=96&sign=4415ab61e3a11c4ea0b28d04bb6634ff&type=album"
+              src="https://sun9-73.userapi.com/impg/kvDjh2D766hP7kRzMQwTmsJvnWS1osyoV54ruw/6wizS34SsTY.jpg?size=254x310&quality=96&sign=481befd6e1829a0d0ea34105ab32533e&type=album"
               alt=""
               class="w-full rounded-lg"
             />
             <img
-              src="https://sun9-69.userapi.com/impg/dJ5pQe_YRmN2D6ksQC2SPGRvezTzOxzXi73QbQ/eyjF1sGjtbA.jpg?size=308x405&quality=96&sign=4415ab61e3a11c4ea0b28d04bb6634ff&type=album"
+              src="https://sun9-41.userapi.com/impg/CDyiieywvrjQMXi3hza832uT0AATv4X63kHclw/f5tnrQwymts.jpg?size=254x307&quality=96&sign=eadcab78745a9480f122ca678fdfe5ca&type=album"
               alt=""
               class="w-full rounded-lg"
             />
             <img
-              src="https://sun9-69.userapi.com/impg/dJ5pQe_YRmN2D6ksQC2SPGRvezTzOxzXi73QbQ/eyjF1sGjtbA.jpg?size=308x405&quality=96&sign=4415ab61e3a11c4ea0b28d04bb6634ff&type=album"
+              src="https://sun9-13.userapi.com/impg/OtQNV97h8H2IiWBJwl9ML4sc1o3Mv24Ss1m1FQ/Js4Pu_OTSB4.jpg?size=252x311&quality=96&sign=f2791f8f64484d8067234489abbe753f&type=album"
               alt=""
               class="w-full rounded-lg"
             />
