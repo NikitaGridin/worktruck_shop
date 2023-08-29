@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="w-full h-[60px] flex items-center justify-center mb-5">
+      Header
+    </header>
+    <main class="w-[80%] mx-auto">
+      <div class="grid grid-cols-1 mb-[38px] md:grid-cols-2 gap-[12px]">
+        <a
+          href="#"
+          class="w-full py-[16px] text-center text-white text-[18px] rounded-[8px] bg-[#003362] font-bold"
+        >
+          Продаём запчасти Scania
+        </a>
+        <a
+          href="#"
+          class="w-full py-[16px] text-center text-white text-[18px] rounded-[8px] bg-[#003362] font-bold"
+        >
+          Восстанавливаем тягачи Scania
+        </a>
+        <a
+          href="#"
+          class="w-full py-[16px] text-center text-white text-[18px] rounded-[8px] bg-[#003362] font-bold"
+        >
+          Рихтуем и красим кабины Scania
+        </a>
+      </div>
+      <div class="w-full">
+        <div class="flex justify-between mb-[10px] font-bold text-[#828282]">
+          <div>€ 103,19</div>
+          <div>8-800-550-96-38</div>
+        </div>
+        <div
+          class="flex justify-between border rounded-[18px] border-[3px] overflow-hidden border-[#1C80DD]"
+        >
+          <input
+            type="text"
+            placeholder="Поиск по номеру детали"
+            class="pl-5 w-full"
+          />
+          <button
+            class="py-[12px] px-[20px] m-[6px] bg-[#1C80DD] rounded-[14px] text-white font-bold"
+          >
+            Найти
+          </button>
+        </div>
+        <div class="bg-[#003362] rounded-[8px] w-full">
+          <div
+            class="flex justify-center font-bold py-[13px] mt-[20px] text-white items-center"
+            id="catalog-button"
+          >
+            <div class="mr-3 text-[20px]">Каталог</div>
+            <img
+              src="./Vector.svg"
+              alt=""
+              class="w-4 h-3 mt-1 transition-all"
+              id="arrow"
+            />
+          </div>
+          <div id="catalog-window" style="display: none">
+            <div
+              class="w-full text-white text-[18px] py-4 text-center font-bold"
+            >
+              Категория
+            </div>
+            <div
+              class="w-full text-white text-[18px] py-4 text-center font-bold"
+            >
+              Категория
+            </div>
+            <div
+              class="w-full text-white text-[18px] py-4 text-center font-bold"
+            >
+              Категория
+            </div>
+            <div
+              class="w-full text-white text-[18px] py-4 text-center font-bold"
+            >
+              Категория
+            </div>
+            <div
+              class="w-full text-white text-[18px] py-4 text-center font-bold"
+            >
+              Категория
+            </div>
+          </div>
+        </div>
+        <div class="mt-[28px] text-[24px] font-bold">
+          <h1 class="mb-[12px]">Вы смотрели</h1>
+          <div class="grid grid-cols-1 gap-[30px]">
+            <img
+              src="https://sun9-69.userapi.com/impg/dJ5pQe_YRmN2D6ksQC2SPGRvezTzOxzXi73QbQ/eyjF1sGjtbA.jpg?size=308x405&quality=96&sign=4415ab61e3a11c4ea0b28d04bb6634ff&type=album"
+              alt=""
+              class="w-full rounded-lg"
+            />
+            <img
+              src="https://sun9-69.userapi.com/impg/dJ5pQe_YRmN2D6ksQC2SPGRvezTzOxzXi73QbQ/eyjF1sGjtbA.jpg?size=308x405&quality=96&sign=4415ab61e3a11c4ea0b28d04bb6634ff&type=album"
+              alt=""
+              class="w-full rounded-lg"
+            />
+            <img
+              src="https://sun9-69.userapi.com/impg/dJ5pQe_YRmN2D6ksQC2SPGRvezTzOxzXi73QbQ/eyjF1sGjtbA.jpg?size=308x405&quality=96&sign=4415ab61e3a11c4ea0b28d04bb6634ff&type=album"
+              alt=""
+              class="w-full rounded-lg"
+            />
+            <img
+              src="https://sun9-69.userapi.com/impg/dJ5pQe_YRmN2D6ksQC2SPGRvezTzOxzXi73QbQ/eyjF1sGjtbA.jpg?size=308x405&quality=96&sign=4415ab61e3a11c4ea0b28d04bb6634ff&type=album"
+              alt=""
+              class="w-full rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var catalogButton = document.getElementById("catalog-button");
+      var catalogWindow = document.getElementById("catalog-window");
+      var arrow = document.getElementById("arrow");
+
+      catalogButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        if (catalogWindow.style.display === "none") {
+          catalogWindow.style.display = "block";
+          arrow.classList.add("rotate-180");
+        } else {
+          catalogWindow.style.display = "none";
+          arrow.classList.remove("rotate-180");
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        var targetElement = event.target; // Получаем элемент, на который был выполнен клик
+
+        // Проверяем, является ли элемент частью списка категорий или кнопкой "Каталог"
+        var isCatalogButton = targetElement.closest("#catalog-button");
+        var isCatalogWindow = targetElement.closest("#catalog-window");
+
+        // Если клик был выполнен вне списка категорий и кнопки "Каталог", закрываем список
+        if (!isCatalogWindow || isCatalogButton) {
+          catalogWindow.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
