@@ -1,6 +1,5 @@
 * {
   outline: none;
-  font-family: "Dexa round";
   line-height: 100%;
   box-sizing: border-box;
   margin: 0px;
@@ -92,23 +91,21 @@ a {
 }
 .m_v2_categories_button img {
   width: 16px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .catalog_window {
   background-color: rgb(47, 70, 134);
   max-height: 0;
-  transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.1s ease-in-out;
 }
 .catalog_window + .active {
   max-height: auto;
 }
 .catalog_window__btn {
   padding: 24px 0px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
-.catalog_window__btn:hover {
-  background-color: rgb(56, 84, 161);
-}
+
 .arrow_rotate {
   transform: rotate(180deg);
 }
@@ -131,7 +128,7 @@ a {
 }
 .subcategory {
   max-height: 0;
-  transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.1s ease-in-out;
   background-color: rgb(56, 84, 161);
   color: white;
   overflow: hidden;
