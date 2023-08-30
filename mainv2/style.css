@@ -13,7 +13,7 @@ a {
 .m_v2_service {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 14px;
   margin-bottom: 80px;
 }
 
@@ -57,7 +57,7 @@ a {
 .m_v2__search input {
   width: 100%;
   border: none;
-  padding: 14px 0px 14px 10px;
+  padding: 10px 0px 10px 10px;
   font-size: 18px;
   font-weight: 500;
 }
@@ -181,6 +181,6 @@ a {
     grid-template-columns: 1fr;
   }
   .m_v2_service a {
-    padding: 24px 0px;
+    padding: 18px 0px;
   }
 }
