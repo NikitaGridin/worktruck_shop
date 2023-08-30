@@ -14,7 +14,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .m_v2_service a {
@@ -34,11 +34,10 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   color: rgb(163 163 163);
   margin-bottom: 10px;
-  padding: 0px 10px;
 }
 .m_v2_service_euro {
   margin-right: 20px;
@@ -58,14 +57,14 @@ a {
   width: 100%;
   border: none;
   padding: 10px 0px 10px 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 .m_v2__search__btn {
   padding: 0px 20px;
   border-radius: 8px;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   background-color: #1c80dd;
   color: white;
@@ -88,7 +87,7 @@ a {
   cursor: pointer;
   display: flex;
   justify-content: center;
-  padding: 24px 0px;
+  padding: 20px 0px;
   border-radius: 8px;
 }
 .m_v2_categories_button div:first-child {
