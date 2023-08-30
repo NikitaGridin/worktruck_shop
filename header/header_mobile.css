@@ -57,7 +57,7 @@
   margin-top: 10px;
   margin-right: 15px;
   margin-left: 10px;
-  background: #003362;
+  background: #003362 !important;
   border-radius: 68px;
   border: none;
   display: -webkit-box;
