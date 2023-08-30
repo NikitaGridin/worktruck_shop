@@ -36,7 +36,7 @@ a {
   justify-content: space-between;
   font-size: 16px;
   font-weight: 600;
-  color: rgb(163 163 163);
+  color: rgb(126, 126, 126);
   margin-bottom: 10px;
 }
 .m_v2_service_euro {
@@ -46,11 +46,11 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border: 3px solid rgb(216, 216, 216);
+  border: 2px solid rgb(216, 216, 216);
   padding: 6px;
-  border-radius: 18px;
+  border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   background-color: white;
 }
 .m_v2__search input {
@@ -68,6 +68,9 @@ a {
   font-weight: 600;
   background-color: #1c80dd;
   color: white;
+}
+.m_mv_main {
+  margin-top: 70px;
 }
 .row {
   margin-top: 10px !important;
