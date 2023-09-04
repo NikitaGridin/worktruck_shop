@@ -16,7 +16,10 @@ a {
   gap: 14px;
   margin-bottom: 40px;
 }
-
+.subcategory_btn {
+  padding: 20px 0px;
+  color: white !important;
+}
 .m_v2_service a {
   background-color: #003362;
   padding: 20px 00px;
@@ -131,11 +134,8 @@ a {
   background-color: rgb(228, 228, 228);
   border-radius: 8px;
 }
-.subcategory a {
-  padding: 20px 0px;
-  color: white !important;
-}
-.subcategory {
+.subcategory,
+.subcategory_category {
   max-height: 0;
   transition: max-height 0.2s ease-in-out;
   background-color: #004b92;

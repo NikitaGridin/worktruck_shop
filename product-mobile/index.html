@@ -10,12 +10,84 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="../header/header.css" />
     <link rel="stylesheet" href="../header/common/style.css" />
     <link rel="stylesheet" href="../header/header_mobile.css" />
     <link rel="stylesheet" href="../common/style.css" />
-    <link rel="stylesheet" href="../tovar_cart/tovar.css">
+    <link rel="stylesheet" href="../tovar_cart/tovar.css" />
+    <style>
+      .main_product_mobile .swiper {
+        width: 100%;
+        height: 240px;
+        margin-bottom: 20px;
+      }
+      .main_product_mobile .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      .product-mobile_btn-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+        gap: 10px;
+      }
+      .product-mobile_btn-wrapper button:first-child {
+        background-color: rgb(50, 116, 238);
+      }
+      .product-mobile_btn-wrapper button:last-child {
+        background-color: rgba(50, 116, 238, 0.692);
+      }
+      .product-mobile_btn-wrapper button {
+        border: 0px;
+        color: white;
+        padding: 12px 0px;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+      .product-mobile-title {
+        font-size: 16px;
+        margin-top: 6px;
+        text-align: justify;
+      }
+      .product-mobile-price {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .main_product_mobile {
+        margin-top: 80px;
+        margin-bottom: 75px;
+      }
+      .swiper-pagination {
+        color: white;
+        font-weight: bold;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: white !important;
+      }
+      .product-mobile-description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 20px;
+        gap: 20px;
+      }
+      .product-mobile-description div div:last-child {
+        border-left: 3px solid rgba(50, 116, 238, 0.692);
+        padding-left: 10px;
+      }
+      .product-mobile-description__title {
+        font-size: 20px;
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -788,16 +860,15 @@
         </div>
       </div>
     </nav>
-
     <!-- Мобильное меню снизу -->
     <div class="navbar">
       <div class="mmenu">
         <a href="https://wa.me/79524759242" class="header_link">
-          <img src="./Whatsapp.svg" alt="whatsapp" />
+          <img src="../header/img/Whatsapp.svg" alt="whatsapp" />
           <span>Whatsapp</span>
         </a>
         <a href="tel:79524759242" class="header_link qwe">
-          <img src="./Mobile.svg" alt="whatsapp" />
+          <img src="../header/img//Mobile.svg" alt="whatsapp" />
           <span>Звонок</span>
         </a>
         <button
@@ -808,11 +879,11 @@
           <img src="../header/img//menu.svg" alt="Icon" />
         </button>
         <a href="viber://add?number=79524759242" class="header_link">
-          <img src="./Viber.svg" alt="whatsapp" />
+          <img src="../header/img//Viber.svg" alt="whatsapp" />
           <span style="font-size: 13px">Viber</span>
         </a>
         <a href="https://t.me/79524759242" class="header_link">
-          <img src="./Telegram.svg" alt="whatsapp" />
+          <img src="../header/img/Telegram.svg" alt="whatsapp" />
           <span>Telegram</span>
         </a>
       </div>
@@ -833,255 +904,91 @@
       crossorigin="anonymous"
     ></script>
     <script src="../header//script_header.js"></script>
-    <main class="container m_mv_main">
-      <div class="m_v2_service">
-        <a
-          href="#"
-          class="w-full py-[16px] text-center text-white text-[18px] rounded-[8px] bg-[#003362] font-bold"
-        >
-          Продаём запчасти Scania
-        </a>
-        <a
-          href="#"
-          class="w-full py-[16px] text-center text-white text-[18px] rounded-[8px] bg-[#003362] font-bold"
-        >
-          Восстанавливаем тягачи Scania
-        </a>
-        <a
-          href="#"
-          class="w-full py-[16px] text-center text-white text-[18px] rounded-[8px] bg-[#003362] font-bold"
-        >
-          Часто задаваемые вопросы
-        </a>
-      </div>
-
-      <div class="m_v2_search_nav">
-        <div class="m_v2_service_euro">€ 103,19</div>
-        <a href="tel:8-800-550-96-38">8-800-550-96-38</a>
-      </div>
-      <div class="m_v2__search">
-        <input type="text" placeholder="Поиск по номеру детали" />
-        <button class="m_v2__search__btn">Найти</button>
-      </div>
-      <div class="m_v2_categories">
-        <div class="m_v2_categories_button" id="catalog-button">
-          <div>Категории</div>
-          <img src="./Vector.svg" alt="arrow" id="arrow" />
-        </div>
-        <div id="catalog-window" class="catalog_window">
-          <div class="catalog_window__category_btn">
-            <div class="catalog_window__btn">Двигатель <span style="margin-left:4px ;">+</span></div>
-            <div class="subcategory">
-              <div class="subcategory_btn">
-                <div>Головка блока</div>
-                <div class="subcategory_category">
-                    <a href="">Категории головки блока</a>
-                    <a href="">Категории головки блока</a>
-                    <a href="">Категории головки блока</a>
-                </div>
-              </div>
-            </div>
+    <main class="container main_product_mobile">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://worktruck.ru/img/products/001/292/822/large/1_IMG_1247.webp?1693509425"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://worktruck.ru/img/products/001/292/821/large/IMG_1248.webp?1693509423"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://worktruck.ru/img/products/001/292/820/large/IMG_1252.webp?1693509420"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://worktruck.ru/img/products/001/292/819/large/IMG_1251.webp?1693509418"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://worktruck.ru/img/products/001/292/824/large/IMG_1250.webp?1693509427"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://worktruck.ru/img/products/001/292/822/large/1_IMG_1247.webp?1693509425"
+              alt=""
+            />
           </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="m_v2_history">
-        <h2>Вы смотрели</h2>
-        <div class="row g-0" style="margin-bottom: 100px;">
-          <div class="card col-sm-12 col-md-6 col-lg-3 mt-1">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <!-- <img src="https://worktruck.ru/img/products/001/048/378/product/1_IMG_6975.webp?1677524250" class="img-fluid"/> -->
-                  <div class="hover-effect-btn">
-                      <img class="card-img-top" src="https://worktruck.ru/img/products/001/048/378/product/1_IMG_6975.webp?1677524250" alt="Card image cap">
-                      <div class="overlay"></div>
-                      <div class="button"><a data-toggle="modal" data-target="#exampleModalCenter" class="qwe">Быстрый просмотр</a></div>
-                  </div>
-              </div>
-              <div class="card-body"><a href="tovar_str.html" class="card_btn">
-                      <h5 class="card-title">Коромысло выпускного клапана HPI</h5>
-                      <p class="articul">Арт: 1895269</p>
-                      <div class="d-flex justify-content-between">
-                          <p class="price">18 000 ₽</p>
-                          <a href="#"><img src="./img/heart.svg" alt="" class="heart_icon"></a>
-                      </div>
-              <div class="d-flex justify-content-between">
-                  <div class="d-flex nalichie">
-                      <img src="./img/nalichie.svg" alt="">
-                      <p class="nalichie_text">В наличии</p>
-                  </div></a>
-                  <button onclick="document.location.replace('#');" class="btn_korz">В корзину</button>
-              </div>
-              </div>
-          </div>
-  
-          <div class="card col-sm-12 col-md-6 col-lg-3 mt-1">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <!-- <img src="https://worktruck.ru/img/products/001/289/833/product/1_IMG_0409.webp?1693336893" class="img-fluid"/> -->
-                  <div class="hover-effect-btn">
-                      <img class="card-img-top" src="https://worktruck.ru/img/products/001/289/833/product/1_IMG_0409.webp?1693336893" alt="Card image cap">
-                      <div class="overlay"></div>
-                      <div class="button"><a data-toggle="modal" data-target="#exampleModalCenter" class="qwe">Быстрый просмотр</a></div>
-                  </div>
-              </div>
-              <div class="card-body"><a href="tovar_str.html" class="card_btn">
-                      <h5 class="card-title">Коромысло выпускного клапана HPI</h5>
-                      <p class="articul">Арт: 1895269</p>
-                      <div class="d-flex justify-content-between">
-                          <p class="price">18 000 ₽</p>
-                          <a href="#"><img src="./img/heart.svg" alt="" class="heart_icon"></a>
-                      </div>
-              <div class="d-flex justify-content-between">
-                  <div class="d-flex nalichie">
-                      <img src="./img/nalichie.svg" alt="">
-                      <p class="nalichie_text">В наличии</p>
-                  </div></a>
-                  <button onclick="document.location.replace('#');" class="btn_korz">В корзину</button>
-              </div>
-              </div>
-          </div>
-  
-          <div class="card col-sm-12 col-md-6 col-lg-3 mt-1">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <!-- <img src="https://worktruck.ru/img/products/001/175/539/product/1_IMG_4690.webp?1682709099" class="img-fluid"/> -->
-                  <div class="hover-effect-btn">
-                      <img class="card-img-top" src="https://worktruck.ru/img/products/001/175/539/product/1_IMG_4690.webp?1682709099" alt="Card image cap">
-                      <div class="overlay"></div>
-                      <div class="button"><a data-toggle="modal" data-target="#exampleModalCenter" class="qwe">Быстрый просмотр</a></div>
-                  </div>
-              </div>
-              <div class="card-body"><a href="tovar_str.html" class="card_btn">
-                      <h5 class="card-title">Коромысло выпускного клапана HPI</h5>
-                      <p class="articul">Арт: 1895269</p>
-                      <div class="d-flex justify-content-between">
-                          <p class="price">18 000 ₽</p>
-                          <a href="#"><img src="./img/heart.svg" alt="" class="heart_icon"></a>
-                      </div>
-              <div class="d-flex justify-content-between">
-                  <div class="d-flex nalichie">
-                      <img src="./img/nalichie.svg" alt="">
-                      <p class="nalichie_text">В наличии</p>
-                  </div></a>
-                  <button onclick="document.location.replace('#');" class="btn_korz">В корзину</button>
-              </div>
-              </div>
-          </div>
-  
-          <div class="card col-sm-12 col-md-6 col-lg-3 mt-1">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <!-- <img src="https://worktruck.ru//img/products/001/047/748/product/1_IMG_6918.webp?1677523404" class="img-fluid"/> -->
-                  <div class="hover-effect-btn">
-                      <img class="card-img-top" src="https://worktruck.ru//img/products/001/047/748/product/1_IMG_6918.webp?1677523404" alt="Card image cap">
-                      <div class="overlay"></div>
-                      <div class="button"><a data-toggle="modal" data-target="#exampleModalCenter" class="qwe">Быстрый просмотр</a></div>
-                  </div>
-              </div>
-              <div class="card-body"><a href="tovar_str.html" class="card_btn">
-                      <h5 class="card-title">Коромысло выпускного клапана HPI</h5>
-                      <p class="articul">Арт: 1895269</p>
-                      <div class="d-flex justify-content-between">
-                          <p class="price">18 000 ₽</p>
-                          <a href="#"><img src="./img/heart.svg" alt="" class="heart_icon"></a>
-                      </div>
-              <div class="d-flex justify-content-between">
-                  <div class="d-flex nalichie">
-                      <img src="./img/nalichie.svg" alt="">
-                      <p class="nalichie_text">В наличии</p>
-                  </div></a>
-                  <button onclick="document.location.replace('#');" class="btn_korz">В корзину</button>
-              </div>
-              </div>
-          </div>
-  
-          <div class="card col-sm-12 col-md-6 col-lg-3 mt-1">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <!-- <img src="https://worktruck.ru/img/products/001/289/833/product/1_IMG_0409.webp?1693336893" class="img-fluid"/> -->
-                  <div class="hover-effect-btn">
-                      <img class="card-img-top" src="https://worktruck.ru/img/products/001/289/833/product/1_IMG_0409.webp?1693336893" alt="Card image cap">
-                      <div class="overlay"></div>
-                      <div class="button"><a data-toggle="modal" data-target="#exampleModalCenter" class="qwe">Быстрый просмотр</a></div>
-                  </div>
-              </div>
-              <div class="card-body"><a href="tovar_str.html" class="card_btn">
-                      <h5 class="card-title">Коромысло выпускного клапана HPI</h5>
-                      <p class="articul">Арт: 1895269</p>
-                      <div class="d-flex justify-content-between">
-                          <p class="price">18 000 ₽</p>
-                          <a href="#"><img src="./img/heart.svg" alt="" class="heart_icon"></a>
-                      </div>
-              <div class="d-flex justify-content-between">
-                  <div class="d-flex nalichie">
-                      <img src="./img/nalichie.svg" alt="">
-                      <p class="nalichie_text">В наличии</p>
-                  </div></a>
-                  <button onclick="document.location.replace('#');" class="btn_korz">В корзину</button>
-              </div>
-              </div>
-          </div>
+      <h2 class="product-mobile-price">2 500,00 ₽</h2>
+      <h4 class="product-mobile-title">
+        000017086 Автомагнитола KENWOOD KDC-W3037G подходит для грузовиков марки
+        Scania/Скания
+      </h4>
+      <div class="product-mobile_btn-wrapper">
+        <button>Позвонить</button>
+        <button>Написать</button>
       </div>
+      <div class="product-mobile-description">
+        <div>
+          <div class="product-mobile-description__title">Артикул</div>
+          <div>000017086</div>
+        </div>
+        <div>
+          <div class="product-mobile-description__title">Код детали</div>
+          <div>17086</div>
+        </div>
+        <div>
+          <div class="product-mobile-description__title">Код детали</div>
+          <div>KENWOOD</div>
+        </div>
+        <div>
+          <div class="product-mobile-description__title">Состояние</div>
+          <div>Б/у</div>
+        </div>
       </div>
     </main>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-      var catalogButton = document.getElementById("catalog-button");
-      var catalogWindow = document.getElementById("catalog-window");
-      var arrow = document.getElementById("arrow");
-      const categories = document.querySelectorAll(".catalog_window__btn");
-      const subcategoryLinks = document.querySelectorAll(".subcategory_btn > div");
-
-      catalogButton.addEventListener("click", function (event) {
-        event.stopPropagation();
-        if (catalogWindow.style.maxHeight) {
-          catalogWindow.style.maxHeight = null;
-          arrow.classList.remove("arrow_rotate");
-        } else {
-          catalogWindow.style.maxHeight = catalogWindow.scrollHeight + "px";
-          arrow.classList.add("arrow_rotate");
-          categories.forEach((category) => {
-            const subcategory = category.nextElementSibling;
-            if (subcategory.style.maxHeight) subcategory.style.maxHeight = null;
-          });
-        }
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
       });
-
-      document.addEventListener("click", function (event) {
-        var targetElement = event.target;
-        var isCatalogButton = targetElement.closest("#catalog-button");
-        var isCatalogWindow = targetElement.closest("#catalog-window");
-
-        if (!isCatalogWindow || isCatalogButton) {
-          arrow.classList.remove("arrow_rotate");
-
-          catalogWindow.style.maxHeight = null;
-          categories.forEach((category) => {
-            const subcategory = category.nextElementSibling;
-            if (subcategory.style.maxHeight) subcategory.style.maxHeight = null;
-          });
-        }
-      });
-
-      categories.forEach((category) => {
-  category.addEventListener("click", () => {
-    const subcategory = category.nextElementSibling;
-    if (subcategory.style.maxHeight) subcategory.style.maxHeight = null;
-    else {
-      subcategory.style.maxHeight = subcategory.scrollHeight + "px";
-      catalogWindow.style.maxHeight = "none";
-    }
-    subcategory.classList.toggle("active");
-    const plusMinus = category.querySelector("span");
-    plusMinus.textContent = subcategory.classList.contains("active") ? "-" : "+";
-  });
-});
-
-subcategoryLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      const subcategoryCategory = link.nextElementSibling;
-        if (subcategoryCategory.style.maxHeight) subcategoryCategory.style.maxHeight = null;
-       else {
-         subcategoryCategory.style.maxHeight = subcategoryCategory.scrollHeight + "px";
-         subcategory.style.maxHeight = "none";      
-        }
-    });
-  });
     </script>
   </body>
 </html>
