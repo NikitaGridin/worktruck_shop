@@ -41,26 +41,40 @@
         gap: 10px;
       }
       .product-mobile_btn-wrapper button:first-child {
-        background-color: rgb(50, 116, 238);
+        background-color: #003362;
       }
       .product-mobile_btn-wrapper button:last-child {
-        background-color: rgba(50, 116, 238, 0.692);
+        background-color: #003362a8;
       }
       .product-mobile_btn-wrapper button {
-        border: 0px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px;
+        border: none;
         color: white;
-        padding: 12px 0px;
-        border-radius: 20px;
         font-weight: 600;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 8px;
+        overflow: hidden;
       }
       .product-mobile-title {
         font-size: 16px;
         margin-top: 6px;
         text-align: justify;
+        align-items: center;
+      }
+      .product-mobile-price button {
+        border: none;
+        padding: 0px;
+        margin: 0px;
       }
       .product-mobile-price {
         font-size: 24px;
         font-weight: bold;
+        display: flex;
+        justify-content: space-between;
       }
       .main_product_mobile {
         margin-top: 80px;
@@ -74,18 +88,29 @@
       .swiper-button-next {
         color: white !important;
       }
-      .product-mobile-description {
+      .product-mobile-attributes {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-top: 20px;
         gap: 20px;
       }
-      .product-mobile-description div div:last-child {
+      .product-mobile-attributes div div:last-child {
         border-left: 3px solid rgba(50, 116, 238, 0.692);
         padding-left: 10px;
       }
-      .product-mobile-description__title {
+      .product-mobile-attributes__title {
         font-size: 20px;
+      }
+      .product-mobile-price__btn_wrapper {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .hidden {
+        display: none;
+      }
+      .product-mobile-description {
+        margin-top: 40px;
       }
     </style>
   </head>
@@ -97,7 +122,7 @@
             ><img src="../header/img/blue_logo.svg" alt="Logo"
           /></a>
           <a href="index.html" class="header-logo-mobile"
-            ><img src="../header/img/blue_logo_mobile.svg" alt="Logo"
+            ><img src="./Vector.svg" alt="Logo" style="width: 18px"
           /></a>
           <button
             type="button"
@@ -948,31 +973,86 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
-      <h2 class="product-mobile-price">2 500,00 ₽</h2>
+      <h2 class="product-mobile-price">
+        <div>2 500 ₽</div>
+        <div class="product-mobile-price__btn_wrapper">
+          <button id="like">
+            <img
+              src="./h_empty.svg"
+              alt=""
+              style="width: 28px"
+              id="like_empty"
+            />
+            <img
+              src="./h_fill.svg"
+              alt=""
+              style="width: 28px"
+              id="like_fill"
+              class="hidden"
+            />
+          </button>
+          <button id="cart">
+            <img
+              src="./cart_empty.svg"
+              alt=""
+              style="width: 24px"
+              id="cart_empty"
+            />
+            <img
+              src="./cart_fill.svg"
+              alt=""
+              style="width: 24px"
+              id="cart_fill"
+              class="hidden"
+            />
+          </button>
+        </div>
+      </h2>
       <h4 class="product-mobile-title">
-        000017086 Автомагнитола KENWOOD KDC-W3037G подходит для грузовиков марки
+        Автомагнитола KENWOOD KDC-W3037G подходит для грузовиков марки
         Scania/Скания
       </h4>
       <div class="product-mobile_btn-wrapper">
         <button>Позвонить</button>
         <button>Написать</button>
       </div>
-      <div class="product-mobile-description">
+      <div class="product-mobile-attributes">
         <div>
-          <div class="product-mobile-description__title">Артикул</div>
+          <div class="product-mobile-attributes__title">Артикул</div>
           <div>000017086</div>
         </div>
         <div>
-          <div class="product-mobile-description__title">Код детали</div>
+          <div class="product-mobile-attributes__title">Код детали</div>
           <div>17086</div>
         </div>
         <div>
-          <div class="product-mobile-description__title">Код детали</div>
+          <div class="product-mobile-attributes__title">Код детали</div>
           <div>KENWOOD</div>
         </div>
         <div>
-          <div class="product-mobile-description__title">Состояние</div>
+          <div class="product-mobile-attributes__title">Состояние</div>
           <div>Б/у</div>
+        </div>
+      </div>
+      <div class="product-mobile-description">
+        <h2>Описание</h2>
+        <div>
+          Сломалась машина? Именно на нашем сайте можно купить Передний мост в
+          сборе (6 серия). Для клиентов у нас есть специальные предложения,
+          скидки и акции. В каталоге вы точно легко сможете подобрать изделие.
+          Предлагаем покупателю исключительно взаимовыгодные условия. Так как мы
+          работаем с проверенными транспортными компаниями, можете не
+          сомневаться, что получите товары точно в срок, доставка никак не
+          повлияет на характеристики изделий. У нас можно заказать услугу
+          быстрой доставки (экспресс), в случае, если не любите ждать. Передний
+          мост в сборе (6 серия) в каталоге WorkTruck отличается по таким
+          параметрам: Номер запчасти для машины 2327854 Внутренний код детали в
+          нашем каталоге на сайтеинтернет-магазина WorkTruck 16970 Номера замен
+          по оригинальному каталогу Производитель Серия Серия P, Серия G, Серия
+          R, Серия S, Серия 4, Серия 5 Обращайтесь в WorkTruck, будем рады
+          сотрудничеству! Чтобы узнать более подробную информацию относительно
+          доставки, стоимости, свяжитесь с нами по контактам, представленным на
+          странице сайта.
         </div>
       </div>
     </main>
@@ -988,6 +1068,25 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+      });
+      const likeButton = document.querySelector("#like");
+      const cartButton = document.querySelector("#cart");
+      const images = document.querySelectorAll("img");
+
+      likeButton.addEventListener("click", () => {
+        images.forEach((image) => {
+          if (image.id === "like_empty" || image.id === "like_fill") {
+            image.classList.toggle("hidden");
+          }
+        });
+      });
+
+      cartButton.addEventListener("click", () => {
+        images.forEach((image) => {
+          if (image.id === "cart_empty" || image.id === "cart_fill") {
+            image.classList.toggle("hidden");
+          }
+        });
       });
     </script>
   </body>
